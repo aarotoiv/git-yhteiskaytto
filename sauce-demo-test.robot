@@ -13,8 +13,10 @@ ${PASSWORD}         secret_sauce
 *** Test Cases ***
 Login
     Open Browser To Login Page
-    Input Text      id:user-name    ${USERNAME}
-    Input Text      id:password     ${PASSWORD}
+    Input Text                  id:user-name    ${USERNAME}
+    Input Text                  id:password     ${PASSWORD}
+    Click Element               id:login-button
+    Wait Until Page Contains    Products
 
 
 *** Keywords ***
